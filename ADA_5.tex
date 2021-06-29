@@ -1,6 +1,6 @@
 \documentclass[12pt, final]{extarticle}
 
-\input{Configs.tex}
+\input{Configs}
 
 % SECTION Datos del título
 \title{ADA 5\\
@@ -20,6 +20,95 @@
 \section{Análisis cinemático}
 \subsection{Método trigonométrico}
 Felipe pipe lo está escribiendo.
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{MT_1a}
+        \caption{}
+        \label{Fig: Los tres engranajes de transmision a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{MT_2a}
+        \caption{}
+        \label{Fig: Los tres engranajes de transmision b}
+    \end{subfigure}
+    \caption{Los tres engranajes de transmisión.}
+    \label{Fig: Los tres engranajes de transmision}
+\end{figure}
+
+Cuando las barras $a$ y $b$ están en una línea recta como se muestra en la
+figura \ref{sub@Fig: Los tres engranajes de transmision a}, los ángulos del
+triángulo resultante son $\beta$, $\gamma$ y $\delta$. Deje
+\begin{equation}
+    s = \frac{1}{2}(a + b + c + d)
+\end{equation}
+Por trigonometría
+\begin{align}
+    \cos^2 \frac{\delta}{2} &= \frac{s(s - d)}{(a + b)c} \\
+    \cos \delta &= 2\cos^2 \frac{\delta}{2} - 1 = \frac{2s(s - d)}{(a + b)c} - 1
+\end{align}
+Por teorema de senos
+\begin{align}
+    \sin \gamma &= \frac{c}{d}\sin\gamma \\
+    \beta &= 180\degree - (\gamma + \delta)
+\end{align}
+
+Con las uniones en las posiciones de la figura
+\ref{sub@Fig: Los tres engranajes de transmision a}, deje que el eje de
+transmisión en $O_{ad}$ sea removido, y deje al engrane 1 ser rotado a través
+del ángulo $\psi$. Esto produce rotaciones en los engranes 2 y 3 como se indica
+por los arcos gruesos y los ángulos designados.
+
+Deje que los engranes 1 y 2 sean unidos al miembro $ab$, y deje que el mecanismo
+sea movido de tal manera que el eje de transmisión pueda ser reconstruido en
+$O_{ad}$. Las partes ahora están en los lugares mostrados en la figura
+\ref{sub@Fig: Los tres engranajes de transmision b} con el eje de transmisión
+girado a través del ángulo $\gamma_{1}$. El ángulo $\delta$ es aumentado hasta
+$\delta_{1}$, y la inclinación de la unión $BO_{cd}$ es cambiada por el valor
+$\beta - (\phi_{1} + \phi_{2})$. Los engranes 2 y 3 sufrieron una rotación
+adicional.
+
+La ecuación para la rotación $\epsilon$ del engrane 3 es el que se presenta a
+continuación.
+\begin{equation}
+    \theta = \gamma + \gamma_{1}
+\end{equation}
+Por el teorema de cosenos
+\begin{equation}
+    e^2 = a^2 + d^2 - 2ad\cos\theta = b^2 + c^2 - 2bc\cos\delta_{1}
+\end{equation}
+o
+\begin{equation}
+    \cos\delta_{1} = \frac{b^2 + c^2 - a^2 - d^2}{2bc} + \frac{ad}{bc}\cos\theta
+    = K_{1} + K_{2}\cos\theta
+\end{equation}
+donde
+\begin{align}
+    K_{1} &= \frac{b^2 + c^2 - a^2 - d^2}{2bc} \\
+    K_{2} &= \frac{ad}{bc} \\
+    \sin\tau &= \frac{c}{e}\sin\delta_{1} \\
+    \phi_{2} &= 180 - (\delta_{1} + \tau) \\
+    \sin\phi_{1} &= \frac{a}{e}\sin\theta \\
+    \psi &= \theta + \phi_{1} - \tau_{1}
+\end{align}
+Entonces
+\begin{equation}
+    \epsilon = \beta - (\phi_{1} + \phi_{2})
+    + \frac{r_{2}}{\lambda r_{1}}(\delta_{1} - \delta) + \frac{\psi}{\lambda}
+\end{equation}
+
+Para el caso en el que los engranes 1 y 3 tienen el mismo tamaño, $\lambda=1$, la ecuación para $\epsilon$ se convierte
+\begin{equation}
+    \epsilon = \theta - \gamma - C\delta + C\delta_{1}
+\end{equation}
+donde
+\begin{equation}
+    C = 1 + \frac{r_{2}}{r_{1}}
+\end{equation}
 
 \subsection{Método vectorial}
 
