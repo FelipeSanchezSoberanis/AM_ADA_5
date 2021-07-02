@@ -14,7 +14,11 @@
 \maketitle
 
 \begin{abstract}
-   En esta actividad se encuentra un análisis general del mecanismo de cuatros barras con tres engranajes, en donde se establece de manera detallada el análisis cinemático con el método vectorial y el trigonométrico, asi como, la simulación y animación del mecanismo 4R-3E con ambos métodos, todo ello hecho por medio del software MatLab. 
+   En esta actividad se encuentra un análisis general del mecanismo de cuatros
+   barras con tres engranajes, en donde se establece de manera detallada el
+   análisis cinemático con el método vectorial y el trigonométrico, asi como, la
+   simulación y animación del mecanismo 4R-3E con ambos métodos, todo ello hecho
+   por medio del software MatLab.
 \end{abstract}
 
 \section{Análisis cinemático}
@@ -452,9 +456,18 @@ del enlace de engranajes.
 \newpage
 \section{Simulación}
 \subsection{Método trigonométrico}
-En el codigo a continuación podemos observar que entre lo más relevante después de la declaración de variables que tenemos de las lineas (1-28) un simbolo especial $@$ este es el encargado de generar un \textbf{function handle}\footnote{\cite{Mat2020}. MatLab, Function handle. 2020} que nos permite llamar constantemente a la misma función, dado las variables de entrada descrita en los parentesis que esta puestos seguidamente del $@$, y que en este caso nos permite computar los variables \textbf{$\epsilon$ y $\omega$}. 
+En el codigo a continuación podemos observar que entre lo más relevante después
+de la declaración de variables que tenemos de las lineas (1-28) un simbolo
+especial $@$ este es el encargado de generar un \textbf{function
+handle}\footnote{\cite{Mat2020}. MatLab, Function handle. 2020} que nos permite
+llamar constantemente a la misma función, dado las variables de entrada descrita
+en los parentesis que esta puestos seguidamente del $@$, y que en este caso nos
+permite computar los variables \textbf{$\epsilon$ y $\omega$}.
 
-El mostrado de las variables esta realizado con una estructura regular que emplea una \textbf{figure} que de forma anidada lleva un \textbf{fplot} que permite dibujar una grafica apartir de una funcion dada por una variable de tipo \textbf{function handler}. 
+El mostrado de las variables esta realizado con una estructura regular que
+emplea una \textbf{figure} que de forma anidada lleva un \textbf{fplot} que
+permite dibujar una grafica apartir de una funcion dada por una variable de tipo
+\textbf{function handler}.
 {\small
 \inputminted{matlab}{Codigos/ADA5_metodo_trig.m}}
 
@@ -465,9 +478,16 @@ El mostrado de las variables esta realizado con una estructura regular que emple
 
 \newpage
 \subsection{Método vectorial}
-En el método vectorial las variables son inicializadas de manera diferente, puesto que por la naturaleza del ejercicio es necesario incorporar variables del tipo \textbf{linspace} para que puedan ser calculados de manera correcta, así mismo son generadas las matrices inicializadas con 0. Para el computo no es necesario simplemente usar nuevamente las variables de tipo \textbf{function handler} por lo que el calculo de las ecuaciones esta realizado en las lineas 39 y 41 respectivamente. 
+En el método vectorial las variables son inicializadas de manera diferente,
+puesto que por la naturaleza del ejercicio es necesario incorporar variables del
+tipo \textbf{linspace} para que puedan ser calculados de manera correcta, así
+mismo son generadas las matrices inicializadas con 0. Para el computo no es
+necesario simplemente usar nuevamente las variables de tipo \textbf{function
+handler} por lo que el calculo de las ecuaciones esta realizado en las lineas 39
+y 41 respectivamente.
 
-Nuevamente, el mostrado de las graficas se realiza mediante el comando \textbf{plot} que permite imprimir los valores de cada uno de los vectores. 
+Nuevamente, el mostrado de las graficas se realiza mediante el comando
+\textbf{plot} que permite imprimir los valores de cada uno de los vectores.
 {\small
 \inputminted{matlab}{Codigos/ADA5_metodo_vec.m}}
 
@@ -479,7 +499,11 @@ Nuevamente, el mostrado de las graficas se realiza mediante el comando \textbf{p
 \newpage
 \section{Animación}
 
-Para las animaciones, se empleo el codigo del calculo anterior al que se lea agrego un bucle for, que permitia la generacion de la animación mediante el \textbf{drawnow}. Cada uno de los engranes esta dibujado mediante el comando \textbf{viscircles}, mismo que se utiliza en ambas formas (vectorial, y trigonometrico). 
+Para las animaciones, se empleo el codigo del calculo anterior al que se lea
+agrego un bucle for, que permitia la generacion de la animación mediante el
+\textbf{drawnow}. Cada uno de los engranes esta dibujado mediante el comando
+\textbf{viscircles}, mismo que se utiliza en ambas formas (vectorial, y
+trigonometrico).
 \subsection{Método trigonométrico}
 {\small
 \inputminted{matlab}{Codigos/ADA5_metodo_trig_animacion.m}}
