@@ -1,5 +1,6 @@
 clear; clc;
 
+% (* Inicializacion de variables *)
 I4 = 3.1;
 I1 = 0.8;
 I2 = 2.5;
@@ -36,12 +37,14 @@ By = I3*sind(theta3);
 theta30 = -242.6061;
 theta20 = 62.6063;
 
+% (* Computo de variables *)
 thetac = theta1 + I2/r3*((theta3 - theta2) - (theta30 - theta20)) - 66.045;
 
 omegac = r1/r3*omega1 + I1/r3*omega1*(sind(theta1 - theta2) ... 
          ./ sind(theta3 - theta2) - sind(theta1 - theta3) ... 
          ./ sind(theta3 - theta2));
 
+% (* Mostrado de graficas *)
 subplot(2, 1, 1);
 plot(linspace(0, 360, length(theta1)), thetac);
 xlim([0 360]);
